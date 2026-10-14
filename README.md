@@ -25,10 +25,10 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [x] **Describe the game's purpose.**
+- [] **Describe the game's purpose.**
   The app picks a secret number within a range set by the difficulty (Easy: 1–20, Normal: 1–100, Hard: 1–50), and the player tries to guess it within a limited number of attempts. After each guess the game gives a "Go HIGHER" / "Go LOWER" hint and updates a score that rewards winning in fewer attempts.
 
-- [x] **Detail which bugs you found.**
+- [] **Detail which bugs you found.**
   1.  Guessing too high told you to "Go HIGHER", and guessing too low told you to "Go LOWER".
   2.  On even attempts the secret is passed as a string, so the old `check_guess` compared strings alphabetically (for example `"9" > "50"`), which gave wrong hints and could make a correct guess not count as a win.
   3. Entering `0` or a number above the difficulty's maximum counted as a normal guess.
@@ -36,7 +36,7 @@ It wrote the code, ran away, and now the game is unplayable.
   5. New Game didn't fully reset. It only reset attempts and the secret, so after a win or loss the status stayed "won"/"lost" and the game stayed locked.
   6. The banner always said "between 1 and 100", whatever the difficulty, and the attempt counter starts at 1 instead of 0. (I noticed these but haven't fixed them.)
 
-- [x] **Explain what fixes you applied.**
+- [] **Explain what fixes you applied.**
   - Refactor: Moved `get_range_for_difficulty`, `parse_guess`, `check_guess`, and `update_score` out of `app.py` into `logic_utils.py`, and imported them back into the app.
   - `check_guess` now converts both values to `int` before comparing, so comparisons are numeric. It returns "Go LOWER" when the guess is too high and "Go HIGHER" when it is too low.
   -  `parse_guess` now takes `low`/`high` and rejects guesses outside the range with "Guess must be between {low} and {high}."
