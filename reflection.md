@@ -64,5 +64,10 @@ Yes, it helped with the fixes and explained them, also the tests it ran were eas
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  I want to reuse the habit of running tests after making changes to catch bugs early and make sure the code still works as expected. I also want to use Git to track my changes and commit my work regularly.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+  Next time, I would ask the AI to explain the changes it makes and work on smaller parts of the code at a time. This would help me understand the code better and identify mistakes more easily.
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  This project taught me that AI-generated code can be helpful, but it is not always correct and can introduce bugs. I learned that I need to review the code, understand how it works, and test it before trusting it.
